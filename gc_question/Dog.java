@@ -26,10 +26,10 @@ public class Dog {
 	Dog d5 = new Dog("Spot");
 	Dog d6 = d2;
 	
-	d4.setAsDogOfTheWeek();  gc();    
-	d5 = d2;                 gc();                   
-	Dog temp = d3;           gc();             
-	d3 = d5;                 gc();                   
+	d4.setAsDogOfTheWeek();  gc(29);    
+	d5 = d2;                 gc(30);                   
+	Dog temp = d3;           gc(31);             
+	d3 = d5;                 gc(32);                   
 	d5 = temp;               gc();                 
 	d3 = getDogOfTheWeek();  gc();    
 	d1.setAsDogOfTheWeek();  gc();    
@@ -43,8 +43,13 @@ public class Dog {
 	resetDogOfTheWeek();     gc();
     }                              
 
-    public static void gc() {
-     // ... encourage garbage collection
+    public static void gc(int i) {
+		System.out.println("gc: i=" + i);
+		System.gc();
+		System.runFinalization ();
+		System.gc();
+		System.runFinalization ();
+		// ... encourage garbage collection
     }     
 
 }
