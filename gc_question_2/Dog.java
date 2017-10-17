@@ -44,7 +44,7 @@ public class Dog {
 	d2 = null;               gc(40);                 
 	d1 = null;               gc(41);                 
 	temp = null;             gc(42);
-	resetDogOfTheWeek();     gc(43);
+	// resetDogOfTheWeek();     gc(43);
     }                              
 
     public static void gc(int i) {

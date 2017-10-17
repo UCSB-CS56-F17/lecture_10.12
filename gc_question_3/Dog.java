@@ -1,5 +1,9 @@
 public class Dog {
 
+	public String toString() {
+		return this.name;
+	}
+	
     private static Dog dogOfTheWeek = null;
     private String name;
 
@@ -37,14 +41,14 @@ public class Dog {
 	d5 = temp;               gc(33);                 
 	d3 = getDogOfTheWeek();  gc(34);    
 	d1.setAsDogOfTheWeek();  gc(35);    
-	d6 = null;               gc(36);
+	/*	d6 = null;               gc(36);
 	d5 = null;               gc(37);			
 	d4 = null;               gc(38);                 
 	d3 = null;               gc(39);                 
 	d2 = null;               gc(40);                 
 	d1 = null;               gc(41);                 
-	temp = null;             gc(42);
-	resetDogOfTheWeek();     gc(43);
+	temp = null;             gc(42); */
+	// resetDogOfTheWeek();     gc(43);
     }                              
 
     public static void gc(int i) {
